@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:id="@+id/content_quick_message"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/lo_content_messsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/triangle_message_up"
+        android:background="@drawable/rounded_border">
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_security_1"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/guide_security_2"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_3_degit"/>
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_4_degit"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.flocash.sdk.quickaction.triangle.TriangleWithBorderTop
+        android:id="@+id/triangle_message_up"
+        android:layout_width="36px"
+        android:layout_height="24px" />
+
+    <com.flocash.sdk.quickaction.triangle.TriangleWithBorderBottom
+        android:id="@+id/triangle_message_down"
+        android:layout_below="@+id/lo_content_messsage"
+        android:layout_marginTop="-5px"
+        android:layout_width="36px"
+        android:layout_height="24px"
+        />
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/height_raw"
+    android:id="@+id/rlItem"
+    android:paddingTop="@dimen/padding_top"
+    android:paddingBottom="@dimen/padding_top"
+    android:paddingRight="@dimen/padding_left"
+    android:paddingLeft="@dimen/padding_left">
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/size_icon_raw"
+        android:layout_height="@dimen/size_icon_raw"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="1111111"
+        android:textSize="@dimen/text_size_title_item_input"
+        android:layout_toRightOf="@id/ivLogo"
+        android:layout_toLeftOf="@+id/cbTick"
+        android:layout_centerVertical="true"/>
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/cbTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

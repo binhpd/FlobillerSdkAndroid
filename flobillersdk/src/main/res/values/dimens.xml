@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_option">20sp</dimen>
+    <dimen name="text_size_pay_invoice">30sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="margin_options_payment">5dp</dimen>
+    <dimen name="height_title">80dp</dimen>
+    <dimen name="magrin_top">15dp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="height_input">40dp</dimen>
+    <dimen name="padding_input_card">20dp</dimen>
+    <dimen name="padding_edt_input">15dp</dimen>
+    <dimen name="padding_content">20dp</dimen>
+    <dimen name="text_size_payment_success">18sp</dimen>
+    <dimen name="padding_medical">10dp</dimen>
+    <dimen name="size_logo_airtime">70dp</dimen>
+    <dimen name="text_size_operator_name_title">18sp</dimen>
+    <dimen name="padding_left">15dp</dimen>
+    <dimen name="padding_top">5dp</dimen>
+    <dimen name="size_icon_raw">50dp</dimen>
+    <dimen name="height_raw">60dp</dimen>
+    <dimen name="margin_left">10dp</dimen>
+    <dimen name="text_size_title_bar">24dp</dimen>
+    <dimen name="size_icon_home">36dp</dimen>
+    <dimen name="title_horizontal_padding">12dp</dimen>
+</resources>

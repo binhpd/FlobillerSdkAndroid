@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:id="@+id/content_quick_message"
+    android:layout_height="wrap_content">
+    <com.flocash.sdk.quickaction.triangle.TriangleWidget
+        android:id="@+id/triangle_message_up"
+        android:layout_width="30px"
+        android:layout_height="20px"/>
+
+    <RelativeLayout
+        android:id="@+id/lo_content_messsage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/triangle_message_up"
+        android:background="@drawable/rounded_corner">
+    </RelativeLayout>
+    <com.flocash.sdk.quickaction.triangle.TriangleWidgetBottom
+        android:id="@+id/triangle_message_down"
+        android:layout_below="@+id/lo_content_messsage"
+        android:layout_width="30px"
+        android:layout_height="20px"
+        />
+</RelativeLayout>

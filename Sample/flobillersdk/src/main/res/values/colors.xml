@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="divider_option">#c0afafaf</color>
+    <color name="stroke_color">#e3868282</color>
+    <color name="color_bg_title">#eef2f4</color>
+    <color name="bg_focus">#b9b9b9</color>
+    <color name="color_submit">#54c7c3</color>
+    <color name="color_submit_press">#37928f</color>
+    <color name="gray">#999999</color>
+    <color name="bg_gray">#e9eef1</color>
+    <color name="red_notice">#d20306</color>
+    <color name="bg_red_error">#fef8f8</color>
+    <color name="colorMain">#005b9c</color>
+    <color name="bg_transparent">#ce000000</color>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FloBiller</string>
+    <string name="payment_amount">Payment Amount</string>
+    <string name="pay_invoice">Pay Invoice</string>
+    <string name="pay">Pay</string>
+    <string name="name_on_card">Name on card</string>
+    <string name="card_number">Card number</string>
+    <string name="expiry_date">Expiry date</string>
+    <string name="security_code">Security code</string>
+    <string name="notify_fields_required">You must be fill all fields</string>
+    <string name="please_wait">Please waiting...</string>
+    <string name="payment_success">Your payment is complete</string>
+    <string name="verification_code">Verification code:</string>
+    <string name="view_receipt">View receipt</string>
+    <string name="enter_16_degit">Enter a 16-degit card number</string>
+    <string name="the_credit_error">The credit card you provide was declined. Please try paying with a different card.</string>
+    <string name="guide_security_1">For Visa, MasterCard and Discover (left) the 3 digits on back of your card</string>
+    <string name="guide_security_2">For American Express (right), the 4 digits  on the front of your card</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="OK">OK</string>
+    <string name="description_service">Enable to use ussd in Flobiller application</string>
+    <string name="ussd_msg">You will be able to see the status of your payment in the next screen.</string>
+    <string name="send_introduction">Send Instruction</string>
+    <string name="or">OR</string>
+</resources>
