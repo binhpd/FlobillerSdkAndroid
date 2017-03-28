@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FlobillerSdkAndroid.iml" filepath="$PROJECT_DIR$/FlobillerSdkAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sample.iml" filepath="$PROJECT_DIR$/Sample.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/flobillersdk/flobillersdk.iml" filepath="$PROJECT_DIR$/flobillersdk/flobillersdk.iml" />
     </modules>

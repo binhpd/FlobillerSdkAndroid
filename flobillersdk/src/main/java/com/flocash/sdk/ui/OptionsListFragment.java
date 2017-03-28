@@ -17,13 +17,13 @@ import com.flocash.core.models.PaymentMethodInfo;
 import com.flocash.core.models.PaymentOptionInfo;
 import com.flocash.core.service.IService;
 import com.flocash.core.service.ServiceFactory;
-import com.flocash.core.service.entity.Environment;
 import com.flocash.core.service.entity.OrderInfo;
 import com.flocash.core.service.entity.Request;
 import com.flocash.core.service.entity.Response;
 import com.flocash.core.utils.Utilities;
 import com.flocash.sdk.R;
 import com.flocash.sdk.adapters.OptionsAdapter;
+import com.flocash.sdk.common.ConfigServer;
 import com.flocash.sdk.tasks.UpdatePaymentTask;
 import com.flocash.sdk.view.ExpandedListView;
 
@@ -215,7 +215,8 @@ public class OptionsListFragment extends BaseFragment implements View.OnClickLis
 
         @Override
         protected Response doInBackground(Request... params) {
-            IService service = new ServiceFactory().getSerivce(Environment.SANDBOX);
+            IService service = new ServiceFactory().getSerivce(ConfigServer.USER_NAME, ConfigServer.PASSWORD,
+                    ConfigServer.BASE_URL, ConfigServer.ORDER_PATH);
             Response result = null;
             try {
                 result = service.createOrder(params[0]);

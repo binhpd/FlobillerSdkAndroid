@@ -16,12 +16,12 @@ import android.widget.Toast;
 import com.flocash.core.models.PaymentMethodInfo;
 import com.flocash.core.service.IService;
 import com.flocash.core.service.ServiceFactory;
-import com.flocash.core.service.entity.Environment;
 import com.flocash.core.service.entity.OrderInfo;
 import com.flocash.core.service.entity.Request;
 import com.flocash.core.service.entity.Response;
 import com.flocash.core.utils.Utilities;
 import com.flocash.sdk.R;
+import com.flocash.sdk.common.ConfigServer;
 import com.flocash.sdk.tasks.UpdatePaymentTask;
 import com.squareup.picasso.Picasso;
 
@@ -44,6 +44,11 @@ public class MobileCardFragment extends BaseFragment implements View.OnClickList
     private String mTraceNumber;
     private String mAmount;
 
+    private LinearLayout mLlMoreOption;
+
+//    private TextView mTvInstruction;
+    private boolean mIsEthiopia = false;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -61,14 +66,20 @@ public class MobileCardFragment extends BaseFragment implements View.OnClickList
         mEdtPhoneCode = (EditText) view.findViewById(R.id.edtPhoneCode);
         mEdtPhoneNumber = (EditText) view.findViewById(R.id.edtPhoneNumber);
         mLlPay = (LinearLayout) view.findViewById(R.id.llPay);
+        mLlMoreOption = (LinearLayout) view.findViewById(R.id.llMoreOption);
+//        mTvInstruction = (TextView) view.findViewById(R.id.tvSendInstroduction);
 
 
         Picasso.with(mActivity).load(mChoosenPayment.getLogo()).into(mIvLogo);
         mTvName.setText(mChoosenPayment.getDisplayName());
-        mTvAmount.setText(mActivity.getCurrency() + " " + Utilities.convertAmount(mAmount));
-        mEdtPhoneCode.setText(mActivity.getPhoneCode());
-        mEdtPhoneNumber.setText(mActivity.getmPhoneNumber());
+        mTvAmount.setText(((PaymentActivity)mActivity).getCurrency() + " " + Utilities.convertAmount(mAmount));
+        mEdtPhoneCode.setText(((PaymentActivity)mActivity).getPhoneCode());
+        mEdtPhoneNumber.setText(((PaymentActivity)mActivity).getmPhoneNumber());
         mLlPay.setOnClickListener(this);
+//        mTvInstruction.setOnClickListener(this);
+
+        mIsEthiopia = ((PaymentActivity)(mActivity)).getCountry().equals(ETHIOPIA);
+        mLlMoreOption.setVisibility(mIsEthiopia ? View.VISIBLE:View.GONE);
 
         return view;
     }
@@ -152,7 +163,8 @@ public class MobileCardFragment extends BaseFragment implements View.OnClickList
 
         @Override
         protected Response doInBackground(Void... params) {
-            IService service = new ServiceFactory().getSerivce(Environment.SANDBOX);
+            IService service = new ServiceFactory().getSerivce(ConfigServer.USER_NAME, ConfigServer.PASSWORD,
+                    ConfigServer.BASE_URL, ConfigServer.ORDER_PATH);
             Response result = null;
             try {
                 result = service.updateAdditionField(traceNumber, hashTableAddition);

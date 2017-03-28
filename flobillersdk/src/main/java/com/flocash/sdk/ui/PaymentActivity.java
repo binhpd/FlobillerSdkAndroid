@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ import android.widget.LinearLayout;
 
 import com.flocash.core.service.entity.Request;
 import com.flocash.sdk.R;
+import com.flocash.sdk.ussd.MyPhoneReceiver;
+import com.flocash.sdk.ussd.UssdService;
 
 /**
  * Created by ${binhpd} on 8/27/2016.
@@ -82,6 +85,13 @@ public class PaymentActivity extends AppCompatActivity implements View.OnClickLi
 
         addFragment(R.id.containerPanel, optionsListFragment);
 
+        startService(new Intent(this, UssdService.class));
+
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(UssdService.USSD_FILTER);
+        MyPhoneReceiver myPhoneReceiver = new MyPhoneReceiver();
+        myPhoneReceiver.setListener(this);
+        registerReceiver(myPhoneReceiver, intentFilter);
     }
 
     public void dailNumber(String code) {
