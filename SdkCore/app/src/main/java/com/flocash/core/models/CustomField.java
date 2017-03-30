@@ -1,7 +1,10 @@
 package com.flocash.core.models;
 
+import android.support.annotation.Keep;
+
 import java.io.Serializable;
 
+@Keep
 public class CustomField  implements Serializable {
 	public static enum Type {
 		NUMBER, DIGIT, CHAR, DATE

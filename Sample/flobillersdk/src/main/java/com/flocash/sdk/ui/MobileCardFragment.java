@@ -46,6 +46,9 @@ public class MobileCardFragment extends BaseFragment implements View.OnClickList
 
     private LinearLayout mLlMoreOption;
 
+//    private TextView mTvInstruction;
+    private boolean mIsEthiopia = false;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -73,6 +76,10 @@ public class MobileCardFragment extends BaseFragment implements View.OnClickList
         mEdtPhoneCode.setText(((PaymentActivity)mActivity).getPhoneCode());
         mEdtPhoneNumber.setText(((PaymentActivity)mActivity).getmPhoneNumber());
         mLlPay.setOnClickListener(this);
+//        mTvInstruction.setOnClickListener(this);
+
+        mIsEthiopia = ((PaymentActivity)(mActivity)).getCountry().equals(ETHIOPIA);
+        mLlMoreOption.setVisibility(mIsEthiopia ? View.VISIBLE:View.GONE);
 
         return view;
     }

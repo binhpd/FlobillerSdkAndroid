@@ -49,7 +49,7 @@ public abstract class BaseService implements IService {
     private static final int TIMEOUT_MILISEC = 70000;
     private static final String APPLICATION_JSON = "application/json";
     private static String basicAuth;
-    private Gson gson;
+    protected Gson gson;
 
     public BaseService(String useName, String password) {
         basicAuth = buildBasicAuth(useName, password);
